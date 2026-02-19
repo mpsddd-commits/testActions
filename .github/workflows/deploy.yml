@@ -28,4 +28,4 @@ jobs:
           pip install --upgrade pip
 
       - name: Run python
-        run: python src/app.py
+        run: python app.py
