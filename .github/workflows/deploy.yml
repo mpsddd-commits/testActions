@@ -15,3 +15,17 @@ jobs:
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
           echo ${{ secrets.USE_NAME }}
+      - name: 저장소 확인
+        uses: actions/checkout@v3
+
+      - name: Python 환경 설정
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+
+      - name: Run python
+        run: python src/app.py
